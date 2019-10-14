@@ -1,6 +1,6 @@
 NAME = libft.a
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -I.
+CFLAGS = -Wall -Wextra -Werror
 
 FILES = ft_putchar.c \
 	    ft_putstr.c \
@@ -82,3 +82,5 @@ fclean: clean
 	@rm -rf $(NAME)
 
 re: fclean all
+
+.phony: clean fclean
