@@ -66,7 +66,7 @@ FILES = ft_putchar.c \
 		ft_printcolor.c \
 		ft_iswhitespace.c \
 
-OBJECT = $(FILES:%.c=%.o)
+OBJECT = $(FILES:.c=.o)
 
 all: $(NAME)
 
