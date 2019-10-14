@@ -6,16 +6,16 @@
 /*   By: ktautuaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/29 09:54:18 by ktautuaa          #+#    #+#             */
-/*   Updated: 2019/10/14 11:10:41 by ktautuaa         ###   ########.fr       */
+/*   Updated: 2019/10/14 11:19:43 by ktautuaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h>
 # include <unistd.h>
-# include <string.h>
+# include <stdlib.h>
+//# include <errno.h>
 
 typedef struct		s_list
 {
