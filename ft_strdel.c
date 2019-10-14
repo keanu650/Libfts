@@ -6,11 +6,12 @@
 /*   By: ktautuaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 12:48:57 by ktautuaa          #+#    #+#             */
-/*   Updated: 2019/07/20 10:16:44 by ktautuaa         ###   ########.fr       */
+/*   Updated: 2019/10/14 12:29:08 by ktautuaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void	ft_strdel(char **aa)
 {

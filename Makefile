@@ -1,6 +1,6 @@
 NAME = libft.a
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I. -c
 
 FILES = ft_putchar.c \
 	    ft_putstr.c \
@@ -64,14 +64,14 @@ FILES = ft_putchar.c \
 		ft_lstadd.c \
 		ft_lstmap.c \
 		ft_printcolor.c \
-		ft_iswhitespace.c
+		ft_iswhitespace.c \
 
-OBJECT = $(FILES:.c=.o)
+OBJECT = $(FILES:%.c=%.o)
 
 all: $(NAME)
 
 $(NAME):
-	@$(CC) -c $(FILES) $(CFLAGS)
+	@$(CC) $(CFLAGS) $(FILES)
 	@ar rc $(NAME) $(OBJECT)
 	@ranlib $(NAME)
 
@@ -82,5 +82,3 @@ fclean: clean
 	@rm -rf $(NAME)
 
 re: fclean all
-
-.phony: clean fclean re all
