@@ -64,7 +64,7 @@ FILES = ft_putchar.c \
 		ft_lstadd.c \
 		ft_lstmap.c \
 		ft_printcolor.c \
-		ft_iswhitespace.c \
+		ft_iswhitespace.c
 
 OBJECT = $(FILES:.c=.o)
 
@@ -83,4 +83,4 @@ fclean: clean
 
 re: fclean all
 
-.phony: clean fclean
+.phony: clean fclean re all
