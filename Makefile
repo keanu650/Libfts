@@ -1,6 +1,6 @@
 NAME = libft.a
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -I. -c
+CFLAGS = -Wall -Wextra -Werror -I.
 
 FILES = ft_putchar.c \
 	    ft_putstr.c \
@@ -71,7 +71,7 @@ OBJECT = $(FILES:.c=.o)
 all: $(NAME)
 
 $(NAME):
-	@$(CC) $(CFLAGS) $(FILES)
+	@$(CC) -c $(FILES) $(CFLAGS)
 	@ar rc $(NAME) $(OBJECT)
 	@ranlib $(NAME)
 
