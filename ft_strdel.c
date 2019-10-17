@@ -3,21 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktautuaa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: pgobeil- <pgobeil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/04 12:48:57 by ktautuaa          #+#    #+#             */
-/*   Updated: 2019/10/14 12:29:08 by ktautuaa         ###   ########.fr       */
+/*   Created: 2019/05/10 22:19:29 by pgobeil-          #+#    #+#             */
+/*   Updated: 2019/05/10 22:30:05 by pgobeil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void	ft_strdel(char **aa)
+void	ft_strdel(char **as)
 {
-	if (aa)
+	if (*as != NULL)
 	{
-		free(*aa);
-		*aa = NULL;
+		free(*as);
+		*as = NULL;
 	}
 }
