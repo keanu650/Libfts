@@ -6,7 +6,7 @@
 #    By: ktautuaa <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/17 13:11:56 by ktautuaa          #+#    #+#              #
-#    Updated: 2019/10/17 13:11:59 by ktautuaa         ###   ########.fr        #
+#    Updated: 2019/10/17 13:20:24 by ktautuaa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,3 +56,5 @@ fclean: clean
 	@rm -rf $(NAME)
 
 re: fclean all
+
+.PHONY clean fclean all re
