@@ -30,8 +30,10 @@ OBJECTS = ft_putchar.o ft_putstr.o ft_tolower.o ft_toupper.o ft_isprint.o \
 
 all: $(NAME)
 
-$(NAME):
-	@gcc -Wall -Wextra -Werror -I. -c $(SRCS)
+INCLUDES = ./
+
+$(NAME): $(SRCS) libft.h
+	@gcc -Wall -Wextra -Werror -I$(INCLUDES) -c $(SRCS)
 	@ar rc $(NAME) $(OBJECTS)
 	@ranlib $(NAME)
 
