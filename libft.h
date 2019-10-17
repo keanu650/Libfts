@@ -6,7 +6,7 @@
 /*   By: ktautuaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/29 09:54:18 by ktautuaa          #+#    #+#             */
-/*   Updated: 2019/10/17 13:15:53 by ktautuaa         ###   ########.fr       */
+/*   Updated: 2019/10/17 14:28:02 by ktautuaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 
 # include <string.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 typedef struct		s_list
 {

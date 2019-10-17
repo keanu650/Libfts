@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktautuaa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: pgobeil- <pgobeil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/04 13:13:03 by ktautuaa          #+#    #+#             */
-/*   Updated: 2019/07/20 09:53:40 by ktautuaa         ###   ########.fr       */
+/*   Created: 2019/05/12 15:04:28 by pgobeil-          #+#    #+#             */
+/*   Updated: 2019/05/20 17:09:49 by pgobeil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 int		ft_strequ(char const *s1, char const *s2)
 {
-	if (!s1 || !s2)
+	unsigned int i;
+
+	i = 0;
+	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
+		i++;
+	if (s2[i] == '\0' && s1[i] == '\0')
+		return (1);
+	else
 		return (0);
-	if (ft_strlen(s1) != ft_strlen(s2))
-		return (0);
-	while (*s1 && *s2)
-		if (*s1++ != *s2++)
-			return (0);
-	return (1);
 }
