@@ -42,6 +42,7 @@ void				ft_putendl_fd(char const *s, int fd);
 void				ft_putendl(char const *s);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putchar_fd(char c, int fd);
+void                ft_putnbr_fd(int n, int fd);
 void				*ft_memalloc(size_t size);
 void				*ft_memset(void *b, int c, size_t len);
 void				*ft_bzero(void *b, size_t n);
