@@ -1,6 +1,18 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ktautuaa <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/10/17 13:11:56 by ktautuaa          #+#    #+#              #
+#    Updated: 2019/10/17 14:09:48 by ktautuaa         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 
-SRCS = ft_putchar.c ft_putstr.c ft_tolower.c ft_toupper.c ft_isprint.c \
+SRCS=ft_putchar.c ft_putstr.c ft_tolower.c ft_toupper.c ft_isprint.c \
 	   ft_isascii.c ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_atoi.c \
 	   ft_strcmp.c ft_strncmp.c ft_strstr.c ft_strcpy.c ft_strnstr.c \
 	   ft_strchr.c ft_strrchr.c ft_strlen.c ft_strcat.c ft_strncat.c \
@@ -14,7 +26,7 @@ SRCS = ft_putchar.c ft_putstr.c ft_tolower.c ft_toupper.c ft_isprint.c \
 	   ft_get_strlen.c ft_lstdelone.c ft_lstdel.c ft_lstiter.c ft_lstadd.c \
 	   ft_lstmap.c ft_printcolor.c ft_iswhitespace.c
 
-OBJECTS = ft_putchar.o ft_putstr.o ft_tolower.o ft_toupper.o ft_isprint.o \
+OBJECTS=ft_putchar.o ft_putstr.o ft_tolower.o ft_toupper.o ft_isprint.o \
 		  ft_isascii.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_atoi.o \
 		  ft_strcmp.o ft_strncmp.o ft_strstr.o ft_strcpy.o ft_strnstr.o \
 		  ft_strchr.o ft_strrchr.o ft_strlen.o ft_strcat.o ft_strncat.o \
@@ -28,10 +40,12 @@ OBJECTS = ft_putchar.o ft_putstr.o ft_tolower.o ft_toupper.o ft_isprint.o \
 		  ft_get_strlen.o ft_lstdelone.o ft_lstdel.o ft_lstiter.o ft_lstadd.o \
 		  ft_lstmap.o ft_printcolor.o ft_iswhitespace.o
 
+INCLUDES=./
+
 all: $(NAME)
 
-$(NAME):
-	@gcc -Wall -Wextra -Werror -I. -c $(SRCS)
+$(NAME): $(SRCS) libft.h
+	@gcc -Wall -Wextra -Werror -I$(INCLUDES) -c $(SRCS)
 	@ar rc $(NAME) $(OBJECTS)
 	@ranlib $(NAME)
 
@@ -42,3 +56,5 @@ fclean: clean
 	@rm -rf $(NAME)
 
 re: fclean all
+
+.PHONY: clean fclean all re
